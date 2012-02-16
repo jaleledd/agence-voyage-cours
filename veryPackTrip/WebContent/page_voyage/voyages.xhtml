@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" >
+
+<ui:composition template="../commun_page/template.xhtml">
+
+	<ui:define name="title">
+			<title>Voyages</title>
+	</ui:define>
+
+	<ui:define name="body">
+	
+		
+			<h1>Liste des voyages</h1>
+			
+			<rich:dataGrid value="#{manager.voyages}" var="voyage" columns="1" elements="3">
+				<rich:panel headerClass="mediumHeaderPanel"
+					onmouseover="document.getElementById(this.id+'_body').style.background='#F1F1F1'"
+					onmouseout="document.getElementById(this.id+'_body').style.background='#FFFFFF'">
+					<f:facet name="header">
+						<h:panelGroup>
+							<h:graphicImage value="../commun_img/voyages/mini_logo.gif" />
+							<h:outputText value=" #{voyage.idVoyage} - #{voyage.nom}"></h:outputText>
+						</h:panelGroup>
+					</f:facet>
+
+					<rich:dataTable 
+						border="0" var="ville" value="#{voyage.villes}"
+						style="margin:10px auto; text-align:center;">
+						<f:facet name="header">
+							<rich:columnGroup>
+								<rich:column>
+									<h:outputText value="Ville" />
+								</rich:column>
+							</rich:columnGroup>
+						</f:facet>
+
+						<rich:columnGroup>
+							<rich:column>
+								<h:outputText value="#{ville.nom}">
+								</h:outputText>
+							</rich:column>
+						</rich:columnGroup>
+					</rich:dataTable>
+
+					<h:panelGroup id="out">
+					<h:form>
+						<a4j:commandButton value="Commander" action="#{manager.commander}" render="out"  >
+							<f:setPropertyActionListener value="#{voyage.idVoyage}"
+									target="#{manager.idVoyage}" />
+						</a4j:commandButton>
+					</h:form>
+					
+					<h:outputText  value="Ce voyage vient d'être commandé" rendered="#{manager.idVoyage == voyage.idVoyage}" />
+					</h:panelGroup>
+				</rich:panel>
+
+
+			</rich:dataGrid>
+			
+			
+	</ui:define>
+
+</ui:composition>
+
+</html>

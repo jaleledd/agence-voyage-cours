@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+<f:view contentType="text/html">
+
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<ui:insert name="title">Titre</ui:insert>
+		<link href="../commun_css/styles.css" rel="stylesheet" type="text/css" media="screen"/>		
+		<link href="../commun_css/zoomer.css" rel="stylesheet" type="text/css" media="screen"/>		
+		<link href="../commun_css/list.css" rel="stylesheet" type="text/css" media="screen"/>	
+		<link href="../commun_css/jquery.lightbox-0.5.css" type="text/css" rel="stylesheet"  media="screen" />
+            
+        <!-- jQuery -->
+        <script src="../commun_js/jquery-1.7.1.min.js" type="text/javascript" ></script>
+        <script src="../commun_js/jquery.imagefit-0.2.js" type="text/javascript" ></script>
+        <script src="../commun_js/jquery.lightbox-0.5.min.js" type="text/javascript" ></script>
+
+        <!-- SLIDE SHOW-->
+        <script type="text/javascript" src="../commun_js/slideshow.js"></script>
+        <script type="text/javascript" src="../commun_js/autoadvance.js"></script>
+        
+        <!-- IMAGE FIT -->
+        <script type="text/javascript">
+	         $(window).load(function(){
+			    $('#slideshow #img').imagefit();
+			    //figureGalleryPhotos
+			    $('#figureGalleryPhotos a').lightBox();
+			});
+        </script>
+	</h:head>
+
+	<h:body>
+
+		<div id="topContainer">
+    		<header role="banner">			
+		    	<div id="headerImage"></div>
+		   	</header>
+		   	<div id="contentHeader">
+		   		<div id="menuHeader">
+		   			<!--START_INC_MENU-->
+		   			<div id="menuPages">
+			   			<nav>
+			   				<a href="/VeryPackTrip/page_accueil/accueil.xhtml">
+			   					<img src="../commun_img/home.png" />
+			   					Accueil
+			   				</a>
+			   			</nav>
+			   			<nav>
+			   				<a href="/VeryPackTrip/pages/voyages.xhtml">
+			   					<img src="../commun_img/plane.png" />
+			   					Les voyages
+			   				</a>
+			   			</nav>
+			   			<nav>
+			   				<a href="/VeryPackTrip/pages/panier.xhtml">
+			   					<img src="../commun_img/caddie.png" />
+			   					Le panier
+			   				</a>
+			   			</nav>
+		   			</div>
+		   			<div id="menuIdentification">
+			   			<h:outputLink value="#{identificationManager.lienConnexion}">
+							<h:outputText value="#{identificationManager.texteLienConnexion}" />
+						</h:outputLink>
+		   			</div>
+		   			<!--END_INC_MENU-->
+		   		</div>
+		   		
+		   		<!--contenuStart-->	
+		   		<div id="sliderHeader">
+		   			<!--START_INC_SLIDER-->
+		   			<div id="slideshow">
+						<ul class="slides">
+					    	<li style="display: none;">
+					    		<canvas style="display: none;" height="230" width="1000"></canvas>
+					    		<img class="imgSlider" src="../commun_img/androidSlide.jpg" alt="Marsa Alam underawter close up" height="100%" width="100%"/>
+					    		</li>
+					       <li class="slideActive" style="display: list-item;">
+					        	<canvas height="230" width="1000"></canvas>
+					        	<img class="imgSlider" src="../commun_img/hptouchpadSlide.jpg" alt="Power Station" height="100%" width="100%"/>
+					        	</li>
+					        <li>
+					        	<canvas height="230" width="1000"></canvas>
+					        	<img class="imgSlider" src="../commun_img/romeSlide.jpg" alt="HP Touchpad" height="100%" width="100%"/>
+					        </li>
+					    </ul>
+					
+					    <span class="arrow previous"></span>
+					    <span class="arrow next"></span>
+					</div>
+		   			<!--END_INC_SLIDER-->
+		   		</div>
+		   	</div>
+    	</div>
+    	<div id="bottomContainer">
+    		<div id="page">
+				<div id="contentPage">
+					<!--START_INC_CONTENT-->
+					<div id="portalArticle">
+						<div id="portalArticleInside">
+							<ui:insert name="body">Corps de page</ui:insert>
+						</div>
+					</div>						
+					<!--END_INC_CONTENT-->
+				</div>
+			</div>		
+			<!--footerStart-->
+			<footer>
+				<div id="infosWebSite">
+					<!--START_INC_FOOTER-->
+					<!--END_INC_FOOTER-->
+				</div>
+			</footer>	 		
+		</div>
+	</h:body>
+</f:view>
+</html>

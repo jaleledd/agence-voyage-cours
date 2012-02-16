@@ -1,0 +1,373 @@
+html{
+	background: url('../commun_../commun_img/patternBackgroundWhite.gif') top left repeat #d9d9d9;
+	height: 100%;
+	width:100%;
+	padding:0;
+	margin: 0;
+	font-family: Arial, Helvetica, FreeSans, sans-serif;
+}
+    
+body{
+	height: 100%;
+	width:100%;
+	margin: 0;
+	padding:0;
+}
+
+
+header{
+	height:267px;
+	width:100%;
+	background: url('../commun_../commun_img/headerBackground.gif') #3399ff;
+	margin:0;
+	padding:0;
+}
+
+#topContainer{
+	margin:0;
+	padding:0;
+}
+
+#bottomContainer{
+	margin-top: 10px;
+	padding:0;
+	height:auto;
+	margin-bottom:0px;
+}
+
+#headerImage{
+	margin:auto;
+	height:264px;
+	max-width: 1000px;
+	background: url('../commun_../commun_img/headerFrontBg.jpg');
+	padding:0;
+}
+
+#contentHeader{
+	height:270px;
+	margin:auto;
+	margin-top:-170px;
+	max-width:1000px;
+}
+
+#menuHeader{
+	height:40px;
+	width:90%;
+	margin:auto;
+	color: #ffffff;
+	font-size: 14pt;
+	font-weight: bold;
+}	
+
+#menuPages a,#menuPages nav{
+	color: #ffffff;
+	text-decoration: none;
+}
+#menuPages a:hover{
+	color: #000000;
+	text-decoration: none;
+}
+
+#menuPages{
+	color: #ffffff;
+	vertical-align:middle;
+	float:left;
+	height:40px;
+}
+#menuPages img{
+	vertical-align:middle;
+}
+nav{
+	float:left;
+	margin-right:30px;
+}
+
+#menuIdentification{
+	float:right;
+	height:40px;
+}
+
+
+#sliderHeader{
+	height: 230px;
+	width:100%;
+	border: 1px solid #666666;
+	background-color: #e4e4e4;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 0px 10px 2px #555555;
+	-moz-box-shadow: 0px 0px 10px 2px #555555;
+	box-shadow: 0px 0px 10px 2px #555555;
+}
+
+#page{
+	
+	margin:auto;
+	max-width:1000px;
+	border: 1px solid #666666;
+	background-color: #e4e4e4;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0px 0px 10px 2px #555555;
+	-moz-box-shadow: 0px 0px 10px 2px #555555;
+	box-shadow: 0px 0px 10px 2px #555555;
+}
+
+#contentPage{
+	padding:10px;
+}#menuPages a,#menuPages nav{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+footer{
+	background: url('../commun_../commun_img/footerBg.gif') #242424;
+	margin-top:-100px;
+    height: 200px; /* Set footer height. */
+   	position:relative;
+	z-index: -1337;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*-------------------------------------------------Gallery----------------------------*/
+/*------------------------------------------------------------------------------------*/
+
+#galleryDescription{
+    display:inline-block;
+    position:relative;
+    margin-bottom:20px;
+}
+
+#figureGalleryAlbums{
+    display:inline-block;
+    text-align:center;
+    position: relative;
+    vertical-align:top;
+    width:184px;
+    padding-top:12px;
+    padding-bottom:10px;
+    padding-left:3px;
+    background: #eae4df;
+    margin:10px;
+}
+
+img.thumbAlbum{
+    border:0px;
+
+}
+
+#figureGalleryAlbums a,#figureGalleryAlbums a:active,#figureGalleryAlbums a:visited{
+    color:#475053;
+    text-decoration:none;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-size: 1.0em;
+}
+
+#figureGalleryPhotos{
+    display:inline-block;
+    text-align:center;
+    position: relative;
+    vertical-align:top;
+    width:144px;
+    height:144px;
+    margin:15px;
+}
+
+img.thumbPhoto{
+    background: #ECECEC;
+}
+
+#figureGalleryPhotos img{
+        border-radius:10px;
+    text-decoration: none;
+    border:0px;
+}
+
+#figureGalleryPhotos a,figureGalleryPhotos a:active,figureGalleryPhotos a:visited{
+    text-decoration: none;
+    border:0px;
+}
+
+h2 {
+    color: #363B4F;
+    display: inline;
+    float: left;
+    font-size: 29px;
+    font-weight: bold;
+    line-height: normal;
+    margin: 0 0 15px;
+    text-transform: none;
+    width: 410px;
+}
+
+a,a:hover,a:active,a:visited{
+    text-decoration: none;
+    color:#475053;
+}
+
+a.albums{
+    text-decoration: none;
+    color:#475053;
+}
+
+#slideshow{
+	height:100%;
+	margin:0;
+	padding:0;
+	position:relative;
+	width:100%;
+}
+
+#slideshow ul{
+	height:100%;
+	width:100%;
+	left:0px;
+	list-style:none outside none;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	margin:0;
+	padding:0;
+}
+
+#slideshow li{
+	position:absolute;
+	display:none;
+	margin:auto;
+	z-index:10;
+}
+
+#slideshow li:first-child{
+	display:block;
+	z-index:1000;
+}
+
+#slideshow .slideActive{
+	z-index:1000;
+}
+
+#slideshow canvas{
+	display:none;
+	position:absolute;
+	z-index:100;
+}
+
+#slideshow .arrow{
+	height:82px;
+	width:60px;
+	position:absolute;
+	background:url('../commun_img/arrows.png') no-repeat;
+	top:50%;
+	margin-top:-41px;
+	cursor:pointer;
+	z-index:5000;
+}
+
+#slideshow .previous{ background-position:left top;left:0;}
+#slideshow .previous:hover{ background-position:left bottom;}
+
+#slideshow .next{ background-position:right top;right:0;}
+#slideshow .next:hover{ background-position:right bottom;}
+
+
+/* The following styles are only used for the styling of the demo page */
+
+p.tzine{
+	text-align:center;
+	font-size:12px;
+	margin:50px;
+}
+
+p.credit{
+	text-align:center;
+	color:#888;
+	font-size:10px;
+}
+
+p.credit a,
+p.credit a:visited{
+	color:#ccc;
+	border-bottom-color:#aaa;
+}
+
+p.credit a:hover{
+	border-bottom-color:transparent;
+}
+
+.clear{
+	clear:both;
+}
+
+<!----------------------------------------------------------------- -->
+
+.list .two-columns.top.right {
+    margin-bottom: 8px;
+    min-height: 0;
+}
+.list .two-columns.right {
+    background: none repeat scroll 0 0 white;
+    box-shadow: 8px 8px 8px #B7BABC;
+    float: center;
+    padding: 10px 10px;
+    width: 94%;
+}
+
+.list .right {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.list .job-infos {
+    display: block;
+    margin: 15px 0 0;
+    overflow: hidden;
+}
+
+ul {
+    padding: 0;
+}
+
+.list .job-infos .info {
+    display: block;
+    float: left;
+    margin-right: 20px;
+    width: 125px;
+}
+
+ul li {
+    list-style: none outside none;
+}
+
+.list .titleList {
+    color: #A6A7BA;
+    display: block;
+    font-size: 12px;
+    line-height: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.list .value {
+    color: #353A4F;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.list .separator {
+    background: none repeat scroll 0 0 #F2F1F5;
+}
+hr.separator {
+    margin-bottom: 0;
+}
+hr.separator {
+    background: none repeat scroll 0 0 #292929;
+}
+hr {
+    background: none repeat scroll 0 0 #EDECED;
+    border: 0 none;
+    clear: both;
+    height: 3px;
+}
