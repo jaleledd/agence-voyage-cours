@@ -13,9 +13,9 @@
     
     <!-- Connexion -->
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://obiwan.univ-brest.fr:3306/ztm2-l_helggu</property>
-    <property name="hibernate.connection.username">l_helggu</property>
-    <property name="hibernate.connection.password">1wkktxuw</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost/jee</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">atchoum</property>
     <property name="hibernate.generate_statistics">false</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.format_sql">false</property>

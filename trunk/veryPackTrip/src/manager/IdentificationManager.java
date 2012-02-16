@@ -74,7 +74,7 @@ public class IdentificationManager {
 	
 	public String getLienConnexion() {
 		System.out.println("public String getTexteConnexion() {");
-		return (isLogged()) ? "/VeryPackTrip/pages/compte.xhtml" : "/VeryPackTrip/pages/identification.xhtml";
+		return (isLogged()) ? "/veryPackTrip/pages/compte.xhtml" : "/veryPackTrip/pages/identification.xhtml";
 	}
 	
 	public String getTexteLienConnexion() {
