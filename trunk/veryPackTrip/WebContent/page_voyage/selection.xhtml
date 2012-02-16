@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets" 
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" >
+
+<ui:composition template="../commun_page/template.xhtml">
+
+	<ui:define name="title">
+		<f:view>
+			<title>Identification</title>
+		</f:view>
+	</ui:define>
+
+	<ui:define name="head">
+		<script	type="text/javascript">
+		</script>
+	</ui:define>
+	
+	<ui:define name="body">
+	
+		<f:view>
+		
+ 
+		<h1>Sélection</h1>
+
+		<h:form method="post" >
+
+          <rich:listShuttle 
+          	sourceValue="#{manager.srceVilles}" 
+            name="OrderBy" id="OrderByID"
+            targetValue="#{manager.destVilles}" 
+            var="item" 
+            copyControlLabel="Sélectionner" 
+            copyAllControlLabel="Sélectionner tout" 
+            sourceCaptionLabel="Items disponibles"
+            targetCaptionLabel="Items sélectionnés" >
+            <h:column>
+            <h:outputText value="#{item}"></h:outputText>
+            </h:column>
+          </rich:listShuttle>
+
+		<a4j:commandButton action="#{manager.process}" value="Valider" />
+         
+		</h:form>
+
+
+	
+		</f:view>
+	</ui:define>
+
+</ui:composition>
+
+</html>
+
